@@ -1,0 +1,7 @@
+
+alias da="dl;dc"
+alias dl="sudo /Scripts/ClearLogFiles.sh"
+alias dc="/Scripts/ClearCaches.sh"
+alias rsa="/Scripts/RestartAll.sh"
+alias dcss="rm /Library/WebServer/hosts/portal.dev.decisiv.net/public/css/* ; rm /Library/WebServer/hosts/pricing.dev.decisiv.net/public/css/*"
+

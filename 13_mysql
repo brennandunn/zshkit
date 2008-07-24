@@ -1,0 +1,5 @@
+
+alias my_stop="sudo /opt/local/share/mysql5/mysql/mysql.server stop"
+alias my_start="sudo /opt/local/share/mysql5/mysql/mysql.server start"
+alias myconf="mate /opt/local/var/db/mysql5/my.cnf"
+

@@ -1,0 +1,8 @@
+
+alias apconf="mate /opt/local/apache2/conf ; sleep 1 ; mate /opt/local/apache2/conf/extra/httpd-vhosts.conf"
+alias apstop="echo 'Stopping Apache2:' && sudo apachectl stop"
+alias apstart="echo 'Starting Apache2:' && sudo apachectl start"
+alias apr="apstop ; sleep 3 ; apstart"
+alias mongrels="ps -ax -o pid -o command | grep mongrel"
+
+
