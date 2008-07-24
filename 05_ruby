@@ -1,0 +1,4 @@
+
+alias irb="irb --prompt simple --readline -r irb/completion"
+
+
