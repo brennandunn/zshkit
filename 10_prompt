@@ -1,2 +1,10 @@
+
+# http://www.acm.uiuc.edu/workshops/zsh/prompt/escapes.html
+# PROMPT='%{$reset_color%}%B%n%b@%m %~`git-prompt`%(!.#.>) '
+
 setopt prompt_subst
-PROMPT='%{$reset_color%}%B%n%b@%m %~`git-prompt`%(!.#.>) '
+
+PROMPT=$'%{$reset_color%}(%B%{$fg[green]%}%n%b@%{$fg[cyan]%}%m%{$reset_color%}) - (%{$fg[cyan]%}%~%{$reset_color%}) `git-prompt` \n-%{$fg[yellow]%}=>> %{$reset_color%}'
+
+
+

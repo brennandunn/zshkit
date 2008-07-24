@@ -4,3 +4,14 @@ alias atr="autotest -q -rails"
 alias mruby="/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby"
 alias mirb="/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/irb --prompt simple --readline -r irb/completion"
 
+# gemdoc() {
+#   local gemdir=`gem env gemdir`
+#   open $gemdir/doc/`/bin/ls $gemdir/doc/ | grep $1 | sort | tail -1`/rdoc/index.html
+# }
+# _gemdocomplete() {
+#   COMPREPLY=($(compgen -W '$(ls `gem env gemdir`/doc)' -- ${COMP_WORDS[COMP_CWORD]}))
+#   return 0
+# }
+# complete -o default -o nospace -F _gemdocomplete gemdoc
+
+

@@ -6,4 +6,10 @@ alias kickstart="sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app
 alias fdns="sudo dscacheutil -flushcache"
 alias safesleepoff="sudo pmset -a hibernatemode 0"
 alias safesleepon="sudo pmset -a hibernatemode 3"
+alias budt="rsync -avv ~/Library/Application\ Support/Desktoptopia/.Backgrounds/ ~/Desktop\ Pictures/DesktoptopiaBu | grep '.jpg$'"
+
+
+alias webmin_start='sudo /opt/local/etc/webmin/start >/dev/null 2>&1 </dev/null'
+alias webmin_stop='sudo /opt/local/etc/webmin/stop'
+
 

@@ -17,8 +17,8 @@ if [[ -x `which git` ]]; then
 	function git-prompt() {
 		branch=$(git-branch-name)
 		if [[ x$branch != x ]]; then
-			dirty_color=$fg[cyan]
-			if [[ $(git-dirty) = 1 ]] { dirty_color=$fg[magenta] }
+			dirty_color=$fg[magenta]
+			if [[ $(git-dirty) = 1 ]] { dirty_color=$fg[red] }
 			[ x$branch != x ] && echo " %{$dirty_color%}$(git-branch-name)%{$reset_color%} "
 		fi
 	}
