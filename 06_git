@@ -1,3 +1,4 @@
+
 if [[ -x `which git` ]]; then
 	function git-branch-name () {
 		git branch 2> /dev/null | grep ^\* | sed s/^\*\ //
@@ -26,3 +27,17 @@ if [[ -x `which git` ]]; then
 	}
 	
 fi
+
+
+alias gst='git status'
+alias gl='git pull'
+alias gp='git push'
+alias gd='git diff'
+alias gc='git commit -v'
+alias gca='git commit -v -a'
+alias gb='git branch'
+alias gba='git branch -a'
+alias grmut='git ls-files -o --exclude-from=.gitignore | xargs rm'
+alias gits="ls /opt/local/bin/ | grep git"
+
+

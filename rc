@@ -5,3 +5,4 @@ compinit
 
 autoload -Uz colors
 colors
+
