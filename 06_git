@@ -1,5 +1,8 @@
 
+# source ~/.git_auto_complete.sh
+
 if [[ -x `which git` ]]; then
+  
 	function git-branch-name () {
 		git branch 2> /dev/null | grep ^\* | sed s/^\*\ //
 	}
@@ -14,29 +17,38 @@ if [[ -x `which git` ]]; then
 		git checkout "${branch}"
 		git rebase master
 	}
+	function gsu () {
+		git checkout master
+		git svn rebase
+	}
 	function git-prompt() {
 		branch=$(git-branch-name)
 		if [[ x$branch != x ]]; then
-			dirty_color=$fg[magenta]
+			dirty_color=$fg[green]
 			if [[ $(git-dirty) = 1 ]] { dirty_color=$fg[red] }
-			[ x$branch != x ] && echo " %{$dirty_color%}$(git-branch-name)%{$reset_color%} "
+			[ x$branch != x ] && echo " %{$dirty_color%}$branch $(git-stash-count)%{$reset_color%} "
 		fi
 	}
-	function git-scoreboard () {
-		git log | grep Author | sort | uniq -ci | sort -r
-	}
-	
+	function git-stash-count() {
+    branch=$(git-branch-name)
+    count=$(git stash list | grep "${branch}" | wc -l | awk '{print $1}')
+    [ $count != 0 ] && echo "($count)"
+  }
+  
 fi
 
 
-alias gst='git status'
-alias gl='git pull'
-alias gp='git push'
-alias gd='git diff'
-alias gc='git commit -v'
-alias gca='git commit -v -a'
-alias gb='git branch'
-alias gba='git branch -a'
+alias gfame='git-log | git-shortlog -n -s'
+alias gst='git-status'
+alias gl='git-pull'
+alias gp='git-push'
+alias gr='git-remote'
+alias gd='git-diff'
+alias gco='git-checkout'
+alias gc='git-commit -v'
+alias gca='git-commit -v -a'
+alias gb='git-branch'
+alias gba='git-branch -a'
 alias grmut='git ls-files -o --exclude-from=.gitignore | xargs rm'
 alias gits="ls /opt/local/bin/ | grep git"
 
