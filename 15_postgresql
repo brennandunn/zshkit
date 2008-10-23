@@ -1,0 +1,12 @@
+
+# To create a database instance, after install do
+#  sudo mkdir -p /opt/local/var/db/postgresql83/defaultdb
+#  sudo chown postgres:postgres /opt/local/var/db/postgresql83/defaultdb
+#  sudo su postgres -c '/opt/local/lib/postgresql83/bin/initdb -D /opt/local/var/db/postgresql83/defaultdb'
+
+# http://www.robbyonrails.com/articles/2008/01/22/installing-ruby-on-rails-and-postgresql-on-os-x-third-edition
+
+alias pg_ld="mate /opt/local/etc/LaunchDaemons/org.macports.postgresql83-server/postgresql83-server.wrapper"
+alias pg_dbs="open /opt/local/var/db/postgresql83"
+alias pg_logs="open /opt/local/var/log/postgresql83"
+
