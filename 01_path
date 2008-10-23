@@ -2,7 +2,7 @@
 # Old kit install
 # path=(/opt/local/bin $path /usr/local/bin /usr/local/sbin)
 
-path=(/opt/local/bin /opt/local/sbin /opt/local/lib/mysql5/bin /opt/local/apache2/bin $path)
+path=(/opt/local/bin /opt/local/sbin /opt/local/lib/mysql5/bin /opt/local/apache2/bin /opt/local/lib/postgresql83/bin $path)
 manpath=(/opt/local/share/man $manpath)
 infopath=(/opt/local/share/info $infopath)
 

@@ -52,7 +52,7 @@ alias gba='git branch -a'
 alias grmut='git ls-files -o --exclude-from=.gitignore | xargs rm'
 alias gits="ls /opt/local/bin/ | grep git"
 alias gfame2="ruby /Scripts/gscore.rb"
-
+alias gh="github"
 
 # Seems to be the best OS X jump-to-github alias from http://tinyurl.com/2mtncf
 alias github="open \`git config -l | grep 'remote.origin.url' | sed -En \
