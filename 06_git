@@ -44,28 +44,44 @@ if [[ -x `which git` ]]; then
   
 fi
 
-
+# Logging
 alias gfame='git log | git shortlog -n -s'
+alias gfame2="ruby /Scripts/gscore.rb"
+alias glog="git log --pretty=oneline"
+alias glog_ss="git log --shortstat"
+alias glog_ns="git log --name-stat"
+alias glog_p="git log -p"
+alias glog_s="git log --pretty=short"
+
+# Rebasing
+alias grc='git rebase --continue'
+alias grs='git rebase --skip'
+alias gra='git rebase --abort'
+
+# Diff
+alias gd='git diff'
+alias gdm='git diff | mate'
+
+# Unorganized
 alias gst='git status'
 alias gl='git pull'
 alias gp='git push'
 alias gr='git remote'
-alias gd='git diff'
-alias gdm='git diff | mate'
 alias ga='git add -i'
 alias gco='git checkout'
 alias gc='git commit -v'
 alias gca='git commit -v -a'
+alias gspp='git stash pop'
 alias gb='git branch'
 alias gba='git branch -a'
+
+# Svn Helpers
+alias gsp="git svn dcommit"
+
+# Utilitarian
 alias grmut='git ls-files -o --exclude-from=.gitignore | xargs rm'
 alias gits="ls /opt/local/bin/ | grep git"
-alias gfame2="ruby /Scripts/gscore.rb"
 alias gh="github"
-
-# Seems to be the best OS X jump-to-github alias from http://tinyurl.com/2mtncf
-# alias github="open \`git config -l | grep 'remote.origin.url' | sed -En \
-# 's/remote.origin.url=git(@|:\/\/)github.com(:|\/)(.+)\/(.+).git/https:\/\/github.com\/\3\/\4/p'\`"
 
 
 
