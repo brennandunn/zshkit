@@ -1,3 +1,55 @@
+-- /opt/local/var/db/mysql5
+-- /opt/local/share/mysql5/mysql
+-- /opt/local/var/run/mysql5/
+
+# ******************************************************
+# * In order to setup the database, you might want to run
+# * sudo -u ${mysqluser} mysql_install_db5
+# * if this is a new install
+# ******************************************************
+# 
+# sudo -u kencollins mysql_install_db
+#   
+#   Installing MySQL system tables...
+#   081231 14:30:57 [Warning] option 'max_join_size': unsigned value 18446744073709551615 adjusted to 4294967295
+#   081231 14:30:57 [Warning] option 'max_join_size': unsigned value 18446744073709551615 adjusted to 4294967295
+#   081231 14:30:57 [Warning] Setting lower_case_table_names=2 because file system for /opt/local/var/db/mysql5/ is case insensitive
+#   OK
+#   Filling help tables...
+#   081231 14:30:57 [Warning] option 'max_join_size': unsigned value 18446744073709551615 adjusted to 4294967295
+#   081231 14:30:57 [Warning] option 'max_join_size': unsigned value 18446744073709551615 adjusted to 4294967295
+#   081231 14:30:57 [Warning] Setting lower_case_table_names=2 because file system for /opt/local/var/db/mysql5/ is case insensitive
+#   OK
+#   
+#   To start mysqld at boot time you have to copy
+#   support-files/mysql.server to the right place for your system
+#   
+#   PLEASE REMEMBER TO SET A PASSWORD FOR THE MySQL root USER !
+#   To do so, start the server, then issue the following commands:
+#   /opt/local/lib/mysql5/bin/mysqladmin -u root password 'new-password'
+#   /opt/local/lib/mysql5/bin/mysqladmin -u root -h station.actionmoniker.com password 'new-password'
+#   
+#   Alternatively you can run:
+#   /opt/local/lib/mysql5/bin/mysql_secure_installation
+#   
+#   which will also give you the option of removing the test
+#   databases and anonymous user created by default.  This is
+#   strongly recommended for production servers.
+#   
+#   See the manual for more instructions.
+#   
+#   You can start the MySQL daemon with:
+#   cd /opt/local ; /opt/local/lib/mysql5/bin/mysqld_safe &
+#   
+#   You can test the MySQL daemon with mysql-test-run.pl
+#   cd mysql-test ; perl mysql-test-run.pl
+#   
+#   Please report any problems with the /opt/local/lib/mysql5/bin/mysqlbug script!
+#   
+#   The latest information about MySQL is available on the web at
+#   http://www.mysql.com
+#   Support MySQL by buying support/licenses at http://shop.mysql.com
+
 
 alias my_stop="sudo /opt/local/share/mysql5/mysql/mysql.server stop"
 alias my_start="sudo /opt/local/share/mysql5/mysql/mysql.server start"
