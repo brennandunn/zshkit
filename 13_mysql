@@ -1,6 +1,6 @@
--- /opt/local/var/db/mysql5
--- /opt/local/share/mysql5/mysql
--- /opt/local/var/run/mysql5/
+# /opt/local/var/db/mysql5
+# /opt/local/share/mysql5/mysql
+# /opt/local/var/run/mysql5/
 
 # ******************************************************
 # * In order to setup the database, you might want to run
