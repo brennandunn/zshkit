@@ -4,6 +4,8 @@ alias atr="autotest -q -rails"
 alias mruby="/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby"
 alias mirb="/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/irb --prompt simple --readline -r irb/completion"
 alias sc="./script/console"
+alias ss="./script/server"
+alias res="touch tmp/restart.txt"
 
 # gemdoc() {
 #   local gemdir=`gem env gemdir`
