@@ -41,6 +41,11 @@ if [[ -x `which git` ]]; then
     count=$(git stash list | grep "${branch}" | wc -l | awk '{print $1}')
     [ $count != 0 ] && echo "($count)"
   }
+  function gtag () {
+    git tag -a -m "Tagging Version ${1}" $1
+    git push origin master
+    git push --tags
+	}
   
 fi
 
