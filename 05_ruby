@@ -27,6 +27,20 @@ _rake_does_task_list_need_generating () {
   fi
 }
 
+chrub () {
+  if [ ! $1 ]; then 
+    v=`ruby -v`
+    echo "Ruby 1.8 or 1.9 version needed. Current Version:"
+    echo $v
+  else
+    rubyexes=(erb gem irb rake rdoc ri ruby testrb)
+    for i in $rubyexes; do
+      sudo unlink "/opt/local/bin/${i}"
+      sudo ln -s "/opt/local/bin/${i}${1}" "/opt/local/bin/${i}"
+    done
+  fi
+}
+
 _rake () {
   if [ -f Rakefile ]; then
     if _rake_does_task_list_need_generating; then
